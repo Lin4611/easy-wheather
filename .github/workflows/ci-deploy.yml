@@ -21,7 +21,14 @@ jobs:
                 echo "檢查當前路徑: $(pwd)"
                 echo "列出當前路徑的檔案:"
                 ls -al
-                
+            
+            - name: 設定Node.js 版本
+              uses: actions/setup-node@v6
+              with:
+                node-version: 24
+            - name: 安裝 npm 套件
+              run: npm install
+
             - name: Typescript 型別檢查
               run: npm run typecheck
             
