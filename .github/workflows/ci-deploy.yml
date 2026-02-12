@@ -21,4 +21,10 @@ jobs:
                 echo "檢查當前路徑: $(pwd)"
                 echo "列出當前路徑的檔案:"
                 ls -al
+                
+            - name: Typescript 型別檢查
+              run: npm run typecheck
+            
+            - name: Eslint檢查
+              run: npm run lint
 
